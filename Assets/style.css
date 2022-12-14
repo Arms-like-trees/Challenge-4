@@ -15,3 +15,8 @@ button {
     max-width: 110px;
     background-color: red;
 }
+
+header {
+    display: flex;
+    justify-content: space-between;
+}

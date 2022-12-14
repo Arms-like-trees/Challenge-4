@@ -15,4 +15,20 @@ function setTime() {
 }, 1000);
 }
 
-setTime ();
+
+
+//The start button to start the quiz
+var startTimer = document.querySelector("#startButton");
+
+startTimer.addEventListener("click", function() {
+    var timerInterval = setInterval(function(){
+    secondsLeft--;
+    timeEl.textContent = "Time: " + secondsLeft;
+
+    if(secondsLeft === 0){
+        clearInterval(timerInterval);
+
+    }
+}, 1000);
+})
+
