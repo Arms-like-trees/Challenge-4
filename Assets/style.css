@@ -1,7 +1,7 @@
 
-.text-box {
+.start-box {
     border: 1px black solid;
-    margin: 10px;
+    margin: auto;
     padding: 10px;
     max-width: 500px;
     color: blueviolet;
@@ -9,10 +9,20 @@
     flex-direction:column;
     justify-content: center;
     
+    
+}
+
+.text-box {
+    border: 1px black solid;
+    margin: auto;
+    padding: 10px;
+    max-width: 500px;
+    color: blueviolet;
+    display: none 
 }
 
 button {
-    max-width: 110px;
+    width: 110px;
     background-color: red;
 }
 

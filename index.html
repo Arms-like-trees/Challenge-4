@@ -12,43 +12,49 @@
         <h3>view highscores</h3>
         <h3 class="time"></h3>
     </header>
-    <div class="text-box" id="Start">
-        <h2>Quick Quiz Rundown</h2>
-        <p>
+    <div>
+        
+    </div>
+
+    <div id="questionSet">
+        <div class="start-box" id="Start">
+            <h2>Quick Quiz Rundown</h2>
+            <p>
             Answer each question within the time limit.  For each wrong answer you will be penalized () seconds, which is also your score.
-        </p>
-        <button id="startButton">Start Quiz</button>
-    </div>
-    <div class="text-box" id="Q1">
-        <h2>Which is an example of a JavaScript string?</h2>
-        <button>9</button>
-        <button>True</button>
-        <button>False</button>
-        <button>"Gallons"</button>
-    </div>
-    <div class="text-box" id="Q2">
-        <h2>String values must be enclosed within ____ when being assigned to variables</h2>
-        <button>Commas</button>
-        <button>Curly brackets</button>
-        <button>Quotes</button>
-        <button>Parenthesis</button>
-    </div>
-    <div class="text-box" id="Q3">
-        <h2>Arrays in JavaScript can be used to store ____.</h2>
-        <button>Numbers and Strings</button>
-        <button>Other Arrays</button>
-        <button>Booleans</button>
-        <button>All of the above</button>
-    </div>
-    <div class="text-box" id="Q4">
-        <h2>Commonly used datat types DO NOT include:</h2>
-        <button>Strings</button>
-        <button>Booleans</button>
-        <button>Alerts</button>
-        <button>Numbers</button>
-    </div>
-    <div class="text-box" id="Submit Score">
-        <h2>Finished!!</h2>
+            </p>
+            <button data-direction="1" id="startButton">Start Quiz</button>
+        </div>
+        <div class="text-box" id="Q1">
+            <h2>Which is an example of a JavaScript string?</h2>
+            <button data-direction="1" class ="wrong">9</button>
+            <button data-direction="1" class ="wrong">True</button>
+            <button data-direction="1" class ="wrong">False</button>
+            <button data-direction="1">"Gallons"</button>
+        </div>
+        <div class="text-box" id="Q2">
+            <h2>String values must be enclosed within ____ when being assigned to variables</h2>
+            <button data-direction="1">Commas</button>
+            <button data-direction="1">Curly brackets</button>
+            <button data-direction="1">Quotes</button>
+            <button data-direction="1">Parenthesis</button>
+        </div>
+        <div class="text-box" id="Q3">
+            <h2>Arrays in JavaScript can be used to store ____.</h2>
+            <button data-direction="1">Numbers and Strings</button>
+            <button data-direction="1">Other Arrays</button>
+            <button data-direction="1">Booleans</button>
+            <button data-direction="1">All of the above</button>
+        </div>
+        <div class="text-box" id="Q4">
+            <h2>Commonly used datat types DO NOT include:</h2>
+            <button data-direction="1">Strings</button>
+            <button data-direction="1">Booleans</button>
+            <button data-direction="1">Alerts</button>
+            <button data-direction="1">Numbers</button>
+        </div>
+        <div class="text-box" id="Submit Score">
+            <h2>Finished!!</h2>
+        </div>
     </div>
 <script src="./Assets/js/script.js"></script>
 </body>

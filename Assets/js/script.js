@@ -25,10 +25,37 @@ startTimer.addEventListener("click", function() {
     secondsLeft--;
     timeEl.textContent = "Time: " + secondsLeft;
 
+
+    
     if(secondsLeft === 0){
         clearInterval(timerInterval);
 
     }
 }, 1000);
 })
+
+
+var currentQuestion = 0;
+document.querySelector("#questionSet").addEventListener('click', function(event){
+    var targetEl = event.target;
+    var forward = targetEl.dataset.direction;
+
+    if (targetEl.matches("button")) {
+        var questionDivs = document.querySelectorAll('#questionSet > div');
+        currentQuestion += parseInt(forward,  10);
+        questionDivs[currentQuestion].classList.remove('text-box');
+        questionDivs[currentQuestion - 1].classList.add("text-box")
+    }
+})
+
+
+// For selecting the wrong answer
+
+var incorrect = document.querySelector(".wrong");
+
+incorrect.addEventListener("click", function(){
+
+    secondsLeft-=10;
+})
+
 
