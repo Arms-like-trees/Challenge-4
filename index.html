@@ -33,27 +33,33 @@
         </div>
         <div class="text-box" id="Q2">
             <h2>String values must be enclosed within ____ when being assigned to variables</h2>
-            <button data-direction="1">Commas</button>
-            <button data-direction="1">Curly brackets</button>
+            <button data-direction="1" class ="wrong">Commas</button>
+            <button data-direction="1" class ="wrong">Curly brackets</button>
             <button data-direction="1">Quotes</button>
-            <button data-direction="1">Parenthesis</button>
+            <button data-direction="1" class ="wrong">Parenthesis</button>
         </div>
         <div class="text-box" id="Q3">
             <h2>Arrays in JavaScript can be used to store ____.</h2>
-            <button data-direction="1">Numbers and Strings</button>
-            <button data-direction="1">Other Arrays</button>
-            <button data-direction="1">Booleans</button>
+            <button data-direction="1" class ="wrong">Numbers and Strings</button>
+            <button data-direction="1" class ="wrong">Other Arrays</button>
+            <button data-direction="1" class ="wrong">Booleans</button>
             <button data-direction="1">All of the above</button>
         </div>
         <div class="text-box" id="Q4">
             <h2>Commonly used datat types DO NOT include:</h2>
-            <button data-direction="1">Strings</button>
-            <button data-direction="1">Booleans</button>
-            <button data-direction="1">Alerts</button>
+            <button data-direction="1" class ="wrong stop">Strings</button>
+            <button data-direction="1" class ="wrong stop">Booleans</button>
+            <button data-direction="1" class ="stop">Alerts</button>
             <button data-direction="1" class ="wrong stop">Numbers</button>
         </div>
         <div class="text-box" id="Submit Score">
             <h2>Finished!!</h2>
+            <p>Your final score is <span id="score"></span></p>
+            <input type="text" name="Initials" id="Initials">
+            <a href="index.html"> <button>Restart Quiz</button></a>
+            <button id="submitInitials"> Submit your Score</button>
+
+
         </div>
     </div>
 <script src="./Assets/js/script.js"></script>
