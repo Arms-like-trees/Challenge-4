@@ -5,21 +5,30 @@ var startQuiz = document.querySelector('.start-box')
 // For setting the timer
 var timeEl = document.querySelector(".time");
 
-var secondsLeft = 75;
+var secondsLeft = 65;
 var timerInterval = null
 
 function setTime() {
     timerInterval = setInterval(function(){
     secondsLeft--;
     timeEl.textContent = "Time: " + secondsLeft;
-
-    if(secondsLeft === 0){
-        clearInterval(timerInterval);
-
-    }
+    checkTime();
 }, 1000);
 }
 
+
+function checkTime() {
+    if (secondsLeft <= 0){
+        console.log ("is it called")
+        var questionDivs = document.querySelectorAll('#questionSet > div');
+        
+        questionDivs[5].classList.remove('text-box');
+        questionDivs[currentQuestion].classList.add('text-box');
+        clearInterval(timerInterval);
+        
+    };
+    score.textContent = secondsLeft;
+}
 
 
 //The start button to start the quiz
@@ -43,12 +52,9 @@ document.querySelector("#questionSet").addEventListener('click', function(event)
         if (forward <= 5){
             console.log(currentQuestion)
         questionDivs[currentQuestion].classList.remove('text-box');
-        questionDivs[currentQuestion - 1].classList.add("text-box")
-        } if (secondsLeft <= 0){
-            secondsLeft = 0;
-            questionDivs[4].classList.add('text-box');
-            questionDivs[currentQuestion].classList.remove('text-box')
-        }
+        questionDivs[currentQuestion - forward].classList.add("text-box")
+        } 
+        
         
     }
 })
@@ -82,26 +88,46 @@ questionSet.addEventListener("click", function(event) {
     var element = event.target;
     if (element.matches('.stop')) {
         clearInterval(timerInterval);
+        
     } if (element.matches('.wrong')){
-        secondsLeft-=10
+        secondsLeft-=10;
+        timeEl.textContent = "Time: " + secondsLeft;
+        checkTime();
+        
     }
+    
 })
 
-
+console.log(timerInterval)
 //Submit score to local storage
 
 var score = document.querySelector("#score");
 var submitScore = document.querySelector("#submitInitials");
-var initials = document.querySelector('Initials').value;
-score.textContent = timerInterval//how do i grab the time remaining to set as time?
+var initials = document.querySelector('#Initials');
+score.textContent = secondsLeft
+
+//how do i grab the time remaining to set as time?
+
+function displayMessage(type, message) {
+    msgDiv.textContent = message;
+    msgDiv.setAttribute('class', type);
+}
 
 submitScore.addEventListener('click',function(event){
     event.preventDefault();
-    if (initials === "") {
+    if (initials.value === "") {
         displayMessage("error", "Initials cannot be blank")
     } else {
+        let scoreInitials = {initials:initials.value, score:score.textContent};
+        var highScoreString = localStorage.getItem("highscore");
+        var highscoreArray = JSON.parse(highScoreString);
+        if (highscoreArray === null ){
+            highscoreArray = []
+        }
+        highscoreArray.push(scoreInitials);
+
         displayMessage("success", "Your score was saved");
-        localStorage.setItem('initials', initials)
-        //place for score
+        localStorage.setItem("highscore", JSON.stringify(highscoreArray))
+      
     }
 })

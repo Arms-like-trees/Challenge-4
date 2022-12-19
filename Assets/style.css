@@ -8,8 +8,6 @@
     display:flex;
     flex-direction:column;
     justify-content: center;
-    
-    
 }
 
 .text-box {
@@ -29,4 +27,25 @@ button {
 header {
     display: flex;  
     justify-content: space-between;
+}
+
+#questionSet {
+    border: 1px black solid;
+    margin: auto;
+    padding: 10px;
+    max-width: 500px;
+    color: blueviolet;
+    display:flex;
+    flex-direction:column;
+    justify-content: center;
+}
+
+.question-box > button {
+    margin: 3px;
+    padding: 8px;
+    max-width: 500px;
+    color: blueviolet;
+    display:flex;
+    flex-direction:column;
+    justify-content: center;
 }
