@@ -4,12 +4,12 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./Assets/style.css" />
+    <link rel="stylesheet" href="./Assets/css/style.css" />
     <title>JavaScript Quiz Challenge</title>
 </head>
 <body>
     <header>
-        <h3>view highscores</h3>
+        <a href="./score.html">User Scores</a>
         <h3 class="time"></h3>
     </header>
     <div>
@@ -24,44 +24,46 @@
             </p>
             <button data-direction="1" id="startButton">Start Quiz</button>
         </div>
-        <div class="text-box question-box" id="Q1">
+        <div class="text-box question-box " id="Q1">
             <h2>Which is an example of a JavaScript string?</h2>
             <button data-direction="1" class ="wrong">9</button>
             <button data-direction="1" class ="wrong">True</button>
             <button data-direction="1" class ="wrong">False</button>
-            <button data-direction="1">"Gallons"</button>
+            <button data-direction="1" classs ="right">"Gallons"</button>
         </div>
-        <div class="text-box" id="Q2">
+        <div class="text-box question-box" id="Q2">
             <h2>String values must be enclosed within ____ when being assigned to variables</h2>
             <button data-direction="1" class ="wrong">Commas</button>
             <button data-direction="1" class ="wrong">Curly brackets</button>
-            <button data-direction="1">Quotes</button>
+            <button data-direction="1" class = "right">Quotes</button>
             <button data-direction="1" class ="wrong">Parenthesis</button>
         </div>
-        <div class="text-box" id="Q3">
+        <div class="text-box question-box" id="Q3">
             <h2>Arrays in JavaScript can be used to store ____.</h2>
             <button data-direction="1" class ="wrong">Numbers and Strings</button>
             <button data-direction="1" class ="wrong">Other Arrays</button>
             <button data-direction="1" class ="wrong">Booleans</button>
-            <button data-direction="1">All of the above</button>
+            <button data-direction="1" class="right">All of the above</button>
         </div>
-        <div class="text-box" id="Q4">
+        <div class="text-box question-box" id="Q4">
             <h2>Commonly used datat types DO NOT include:</h2>
             <button data-direction="1" class ="wrong stop">Strings</button>
             <button data-direction="1" class ="wrong stop">Booleans</button>
-            <button data-direction="1" class ="stop">Alerts</button>
+            <button data-direction="1" class ="stop right">Alerts</button>
             <button data-direction="1" class ="wrong stop">Numbers</button>
         </div>
-        <div class="text-box" id="Submit Score">
+        <div class="text-box question-box" id="Submit Score">
             <h2>Finished!!</h2>
+            <a href="index.html"> <button>Restart Quiz</button></a>
             <p>Your final score is <span id="score"></span></p>
             <input type="text" name="Initials" id="Initials">
-            <a href="index.html"> <button>Restart Quiz</button></a>
+            
             <button id="submitInitials"> Submit your Score</button>
             <div id="msgDiv"></div>
-
+            
 
         </div>
+        <span class="answer"></span>
     </div>
 <script src="./Assets/js/script.js"></script>
 </body>

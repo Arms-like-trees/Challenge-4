@@ -93,12 +93,31 @@ questionSet.addEventListener("click", function(event) {
         secondsLeft-=10;
         timeEl.textContent = "Time: " + secondsLeft;
         checkTime();
-        
     }
     
 })
 
-console.log(timerInterval)
+//Message for wrong right answers
+questionSet.addEventListener("click", function(event) {
+    var element = event.target;
+    
+    function answer (type, message){
+        var answerspan = document.querySelector(".answer");
+        answerspan.textContent = message;
+        answerspan.setAttribute("class", type);
+        console.log("working?")
+
+    }
+    if (element.matches('.right')) {
+        answer("answer", "correct");
+        
+    } if (element.matches('.wrong')) 
+        answer("answer", "Incorrect")
+    
+    
+})
+
+
 //Submit score to local storage
 
 var score = document.querySelector("#score");
@@ -131,3 +150,4 @@ submitScore.addEventListener('click',function(event){
       
     }
 })
+
