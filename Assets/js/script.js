@@ -5,10 +5,11 @@ var startQuiz = document.querySelector('.start-box')
 // For setting the timer
 var timeEl = document.querySelector(".time");
 
-var secondsLeft = 65;
+var secondsLeft = 75;
 var timerInterval = null
 
 function setTime() {
+    timeEl.textContent = "Time: " + secondsLeft;
     timerInterval = setInterval(function(){
     secondsLeft--;
     timeEl.textContent = "Time: " + secondsLeft;
@@ -125,7 +126,6 @@ var submitScore = document.querySelector("#submitInitials");
 var initials = document.querySelector('#Initials');
 score.textContent = secondsLeft
 
-//how do i grab the time remaining to set as time?
 
 function displayMessage(type, message) {
     msgDiv.textContent = message;
