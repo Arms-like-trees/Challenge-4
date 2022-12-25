@@ -1,4 +1,4 @@
-
+/* To style the page upon loading*/
 .start-box {
     border: 1px black solid;
     margin: auto;
@@ -9,7 +9,7 @@
     flex-direction:column;
     justify-content: center;
 }
-
+/*To style the questions once called upon via Javascript*/
 .text-box {
     border: 1px black solid;
     margin: auto;
@@ -18,7 +18,7 @@
     color: blueviolet;
     display: none 
 }
-
+/*To style all the button for answers throughout the quiz*/
 button {
     width: 110px;
     background-color: red;
@@ -28,7 +28,7 @@ header {
     display: flex;  
     justify-content: space-between;
 }
-
+/*To center the questions upon loading*/
 #questionSet {
     border: 1px black solid;
     margin: auto;
@@ -39,7 +39,7 @@ header {
     flex-direction:column;
     justify-content: center;
 }
-
+/*To to align the button in a column upon loading*/
 .question-box > button {
     margin: 3px;
     padding: 8px;
